@@ -1,0 +1,69 @@
+
+application {
+  config {
+    baseName mydetails,
+    applicationType monolith,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework React
+    
+  }
+ 
+}
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
+
+
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+entity Department {
+	departmentName String required
+}
+
+
+entity Task {
+	title String,
+	description String
+}
+
+
+entity Employee {
+	
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+entity Job {
+	jobTitle String,
+	minSalary Long,
+	maxSalary Long
+}
+
+entity JobHistory {
+	startDate Instant,
+	endDate Instant,
+	language Language
+}
+
+
+
+relationship OneToMany {
+	Country{region} to Region
+}
+    
