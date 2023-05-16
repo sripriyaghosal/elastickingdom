@@ -143,7 +143,7 @@ export const UserManagementUpdate = () => {
                 type="checkbox"
                 name="activated"
                 check
-                value={true}
+                value
                 disabled={!user.id}
                 label={translate('userManagement.activated')}
               />
