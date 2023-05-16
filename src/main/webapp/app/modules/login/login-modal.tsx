@@ -75,7 +75,7 @@ const LoginModal = (props: ILoginModalProps) => {
                 type="checkbox"
                 check
                 label={translate('login.form.rememberme')}
-                value={true}
+                value
                 register={register}
               />
             </Col>
